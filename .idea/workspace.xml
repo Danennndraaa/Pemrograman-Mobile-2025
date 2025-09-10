@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="754e6e59-d524-4d79-b27a-304b4f0c6403" name="Changes" comment="tugas praktikum - Pengantar Bahasa Pemrograman Dart - Bagian 1" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="32AoNwMfcggJPrdZMd0M3iQWK7N" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Dart Command Line App.BilanganPrima.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.ControlFlows.Dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.ControlFlows.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.ControlFlows1.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.ControlFlows2.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.datalist.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.dowhile.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.for.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.forloop.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.forloop2.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.main.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.while1.dart.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;&lt;unknown&gt;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Pemr Mobile 2025&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Pemr Mobile 2025\Pemrograman Dasar Dart Bagian 3" />
+      <recent name="C:\Pemr Mobile 2025" />
+      <recent name="C:\Pemr Mobile 2025\Pemrograman Dasar Dart Bagian 2" />
+      <recent name="C:\Pemr Mobile 2025\Pemrograman Dasar Dart Bagian 1" />
+      <recent name="C:\Pemr Mobile 2025\" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Dart Command Line App.BilanganPrima.dart">
+    <configuration name="BilanganPrima.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/Pemrograman Dasar Dart Bagian 2/Tugas Praktikum - Bag 2/BilanganPrima.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/Pemrograman Dasar Dart Bagian 2/Tugas Praktikum - Bag 2" />
+      <method v="2" />
+    </configuration>
+    <configuration name="datalist.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/Pemrograman Dasar Dart Bagian 3/Praktikum 1 - Bag 3/datalist.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/Pemrograman Dasar Dart Bagian 3/Praktikum 1 - Bag 3" />
+      <method v="2" />
+    </configuration>
+    <configuration name="for.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/Pemrograman Dasar Dart Bagian 2/Praktikum 3 - Bag 2/for.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/Pemrograman Dasar Dart Bagian 2/Praktikum 3 - Bag 2" />
+      <method v="2" />
+    </configuration>
+    <configuration name="forloop2.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/Pemrograman Dasar Dart Bagian 2/Praktikum 3 - Bag 2/forloop2.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/Pemrograman Dasar Dart Bagian 2/Praktikum 3 - Bag 2" />
+      <method v="2" />
+    </configuration>
+    <configuration name="forloop.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/Pemrograman Dasar Dart Bagian 2/Praktikum 3 - Bag 2/forloop.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/Pemrograman Dasar Dart Bagian 2/Praktikum 3 - Bag 2" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Dart Command Line App.BilanganPrima.dart" />
+        <item itemvalue="Dart Command Line App.datalist.dart" />
+        <item itemvalue="Dart Command Line App.forloop2.dart" />
+        <item itemvalue="Dart Command Line App.forloop.dart" />
+        <item itemvalue="Dart Command Line App.for.dart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="754e6e59-d524-4d79-b27a-304b4f0c6403" name="Changes" comment="" />
+      <created>1756872702787</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756872702787</updated>
+    </task>
+    <task id="LOCAL-00001" summary="tugas praktikum - Pengantar Bahasa Pemrograman Dart - Bagian 1">
+      <option name="closed" value="true" />
+      <created>1757478150073</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757478150073</updated>
+    </task>
+    <task id="LOCAL-00002" summary="tugas praktikum - Pengantar Bahasa Pemrograman Dart - Bagian 1">
+      <option name="closed" value="true" />
+      <created>1757479322091</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757479322091</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="tugas praktikum - Pengantar Bahasa Pemrograman Dart - Bagian 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="tugas praktikum - Pengantar Bahasa Pemrograman Dart - Bagian 1" />
+  </component>
+</project>
