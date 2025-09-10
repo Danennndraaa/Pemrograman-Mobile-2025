@@ -21,7 +21,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -31,34 +31,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Dart Command Line App.BilanganPrima.dart.executor&quot;: &quot;Run&quot;,
-    &quot;Dart Command Line App.ControlFlows.Dart.executor&quot;: &quot;Run&quot;,
-    &quot;Dart Command Line App.ControlFlows.dart.executor&quot;: &quot;Run&quot;,
-    &quot;Dart Command Line App.ControlFlows1.dart.executor&quot;: &quot;Run&quot;,
-    &quot;Dart Command Line App.ControlFlows2.dart.executor&quot;: &quot;Run&quot;,
-    &quot;Dart Command Line App.datalist.dart.executor&quot;: &quot;Run&quot;,
-    &quot;Dart Command Line App.dowhile.dart.executor&quot;: &quot;Run&quot;,
-    &quot;Dart Command Line App.for.dart.executor&quot;: &quot;Run&quot;,
-    &quot;Dart Command Line App.forloop.dart.executor&quot;: &quot;Run&quot;,
-    &quot;Dart Command Line App.forloop2.dart.executor&quot;: &quot;Run&quot;,
-    &quot;Dart Command Line App.main.dart.executor&quot;: &quot;Run&quot;,
-    &quot;Dart Command Line App.while1.dart.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;&lt;unknown&gt;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Pemr Mobile 2025&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Dart Command Line App.BilanganPrima.dart.executor": "Run",
+    "Dart Command Line App.ControlFlows.Dart.executor": "Run",
+    "Dart Command Line App.ControlFlows.dart.executor": "Run",
+    "Dart Command Line App.ControlFlows1.dart.executor": "Run",
+    "Dart Command Line App.ControlFlows2.dart.executor": "Run",
+    "Dart Command Line App.datalist.dart.executor": "Run",
+    "Dart Command Line App.dowhile.dart.executor": "Run",
+    "Dart Command Line App.for.dart.executor": "Run",
+    "Dart Command Line App.forloop.dart.executor": "Run",
+    "Dart Command Line App.forloop2.dart.executor": "Run",
+    "Dart Command Line App.main.dart.executor": "Run",
+    "Dart Command Line App.while1.dart.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Pemrograman Mobile 2025",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Pemr Mobile 2025\Pemrograman Dasar Dart Bagian 3" />
