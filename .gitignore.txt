@@ -1,0 +1,12 @@
+# Ignore Android Studio settings
+.idea/
+.idea/*
+
+# Ignore VS Code settings
+.vscode/
+.vscode/*
+
+# Ignore build outputs
+build/
+*/build/
+.gradle/

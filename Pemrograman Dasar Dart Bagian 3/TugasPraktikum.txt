@@ -1,0 +1,150 @@
+1. Jelaskan yang dimaksud Functions dalam bahasa Dart!
+    > Functions dalam Dart adalah blok kode yang digunakan untuk menjalankan tugas tertentu.
+    > Fungsi membantu kita mengelompokkan logika, sehingga kode lebih rapi, reusable, dan mudah dipelihara.
+    > Dalam Dart, function didefinisikan dengan keyword void, tipe data lain, atau => (arrow function).
+
+    Contoh:
+    // Function sederhana
+    void sayHello() {
+      print("Hello, Dart!");
+    }
+
+2. Jelaskan jenis-jenis parameter di Functions beserta contoh sintaksnya!
+    Dart memiliki beberapa jenis parameter:
+
+    1. Positional parameters (wajib, urutannya harus sesuai)
+    void greet(String name, int age) {
+      print("Hello $name, umur kamu $age tahun.");
+    }
+
+    void main() {
+      greet("Danendra", 21);
+    }
+
+    2. Optional positional parameters (ditandai dengan [])
+    void greetOptional(String name, [int? age]) {
+      print("Hello $name, umur: ${age ?? 'tidak diketahui'}");
+    }
+
+    void main() {
+      greetOptional("Danendra");
+      greetOptional("Adhi", 21);
+    }
+
+
+    3. Named parameters (ditandai dengan {})
+    Bisa diberi nilai default dan lebih fleksibel.
+    void greetNamed({required String name, int age = 18}) {
+      print("Hello $name, umur kamu $age tahun.");
+    }
+
+    void main() {
+      greetNamed(name: "Danendra");
+      greetNamed(name: "Adhi", age: 22);
+    }
+
+3. Jelaskan maksud Functions sebagai first-class objects beserta contoh sintaknya!
+    > Di Dart, function adalah first-class objects, artinya function bisa:
+        > Disimpan dalam variabel
+        > Dikirim sebagai parameter ke function lain
+        > Dikembalikan dari function lain
+
+    Contoh:
+    // Function bisa disimpan di variabel
+    void sayHi(String name) => print("Hi, $name");
+
+    void main() {
+      var greet = sayHi; // simpan function di variabel
+      greet("Danendra"); // panggil via variabel
+
+      // Function sebagai parameter
+      void execute(Function f) {
+        f("Adhipramana");
+      }
+
+      execute(sayHi); // passing function
+    }
+
+4. Apa itu Anonymous Functions? Jelaskan dan berikan contohnya!
+    > Anonymous function = function tanpa nama.
+    > Biasanya digunakan sekali pakai atau sebagai argumen function.
+
+    Contoh:
+    void main() {
+      // Anonymous function disimpan di variabel
+      var add = (int a, int b) {
+        return a + b;
+      };
+      print(add(3, 4)); // 7
+
+      // Anonymous function langsung dipakai di forEach
+      var list = [1, 2, 3];
+      list.forEach((item) {
+        print("Angka: $item");
+      });
+    }
+
+5. Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
+    > Lexical Scope
+        > Scope variabel ditentukan oleh lokasi kode pada saat ditulis, bukan saat dieksekusi.
+        > Function hanya bisa mengakses variabel di dalam scope-nya atau scope luarnya.
+
+Contoh Lexical Scope:
+void main() {
+  var name = "Danendra";
+
+  void sayName() {
+    print(name); // bisa akses variabel di luar scope
+  }
+
+  sayName(); // "Danendra"
+}
+
+    > Lexical Closures
+        > Closure = function yang mengikat (capture) variabel dari lexical scope di mana function itu dibuat, meskipun scope aslinya sudah selesai dieksekusi.
+
+    Contoh Closure:
+    Function makeCounter() {
+      var count = 0;
+
+      return () {
+        count++;
+        return count;
+      };
+    }
+
+    void main() {
+      var counter = makeCounter();
+
+      print(counter()); // 1
+      print(counter()); // 2
+      print(counter()); // 3
+    }
+
+    Variabel count tetap hidup walaupun makeCounter() sudah selesai, karena closure menyimpannya.
+
+6. Jelaskan dengan contoh cara membuat return multiple value di Functions!
+    > Dart tidak mendukung multiple return langsung, tapi bisa menggunakan:
+        > Record (sejak Dart 3)
+        > List/Map
+        > Class
+
+    Contoh return multiple values dengan Record:
+    (String, int) getMahasiswa() {
+      return ("Danendra Adhipramana", 244107023011);
+    }
+
+    void main() {
+      var (nama, nim) = getMahasiswa(); // destructuring
+      print("Nama: $nama, NIM: $nim");
+    }
+
+    Contoh return multiple values dengan Map:
+    Map<String, dynamic> getData() {
+      return {"nama": "Danendra", "nim": 244107023011};
+    }
+
+    void main() {
+      var data = getData();
+      print("Nama: ${data['nama']}, NIM: ${data['nim']}");
+    }
