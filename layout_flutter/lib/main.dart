@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
           children: [
             titleSection,
             buttonSection,
+            textSection
             // ganti Hello World dengan variabel titleSection
           ],
         ),
@@ -95,3 +96,12 @@ Column _buildButtonColumn(Color color, IconData icon, String label) {
     ],
   );
 }
+
+Widget textSection = Container(
+  padding: const EdgeInsets.all(32),
+  child: const Text(
+        'Jawa Timur Park adalah sebuah tempat rekreasi dan taman belajar yang terdapat di Kota Batu, Jawa Timur. Objek wisata ini berada sekitar 20 km barat Kota Malang, dan kini menjadi salah satu icon wisata Jawa Timur. '
+        ' Danendra Adhipramana | 244107023011',
+    softWrap: true,
+  ),
+);
