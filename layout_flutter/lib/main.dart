@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
+            imageSection,
             titleSection,
             buttonSection,
             textSection
@@ -104,4 +105,11 @@ Widget textSection = Container(
         ' Danendra Adhipramana | 244107023011',
     softWrap: true,
   ),
+);
+
+Widget imageSection = Image.asset(
+  'images/jtp.jpg', // pastikan nama file sama seperti di pubspec.yaml
+  width: 600,
+  height: 240,
+  fit: BoxFit.cover,
 );
