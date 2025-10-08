@@ -8,20 +8,20 @@ class ItemPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Item item = ModalRoute.of(context)!.settings.arguments as Item;
+    final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
 
     return Scaffold(
-      appBar: AppBar(title: Text(item.title)),
+      appBar: AppBar(title: Text(itemArgs.title)),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Image.asset(
-              item.imagePath,
+              itemArgs.imagePath,
               width: double.infinity,
               height: 250,
               fit: BoxFit.cover,
             ),
-            ItemDetail(item: item),
+            ItemDetail(item: itemArgs),
           ],
         ),
       ),

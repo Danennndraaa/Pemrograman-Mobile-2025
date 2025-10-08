@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Wisata Jawa Timur - Danendra Adhipramana 244107023011',
+      title: 'Layout Flutter: Danendra Adhipramana 244107023011',
       theme: ThemeData(primarySwatch: Colors.blue),
       initialRoute: '/',
       routes: {
