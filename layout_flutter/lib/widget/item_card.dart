@@ -26,16 +26,19 @@ class ItemCard extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Gambar di sebelah kiri
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.asset(
-                  item.imagePath,
-                  width: 120, // ukuran gambar lebih kecil
-                  height: 80,
-                  fit: BoxFit.cover,
+              Hero(
+                tag: item.title,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.asset(
+                    item.imagePath,
+                    width: 120,
+                    height: 80,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
+
               const SizedBox(width: 16),
 
               // Teks di kanan

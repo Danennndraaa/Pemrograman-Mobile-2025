@@ -15,11 +15,14 @@ class ItemPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset(
-              itemArgs.imagePath,
-              width: double.infinity,
-              height: 250,
-              fit: BoxFit.cover,
+            Hero(
+                tag: itemArgs.title,
+                child: Image.asset(
+                  itemArgs.imagePath,
+                  width: double.infinity,
+                  height: 250,
+                  fit: BoxFit.cover,
+                ),
             ),
             ItemDetail(item: itemArgs),
           ],
