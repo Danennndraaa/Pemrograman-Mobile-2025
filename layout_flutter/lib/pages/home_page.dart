@@ -3,8 +3,15 @@ import 'package:layout_flutter/widget/item_card.dart';
 import '../models/item.dart';
 import 'item_page.dart';
 
-class HomePage extends StatelessWidget {
-  HomePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  bool isGridView = false;
 
   final List<Item> items = [
     Item(
@@ -40,22 +47,116 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Wisata Jawa Timur'),
         centerTitle: true,
-      ),
-      body: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          final item = items[index];
-          return ItemCard(
-            item: item,
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/item',
-                arguments: item,
-              );
+        actions: [
+          IconButton(
+            icon: Icon(isGridView ? Icons.list : Icons.grid_view),
+            tooltip: isGridView ? 'Tampilan List' : 'Tampilan Grid',
+            onPressed: () {
+              setState(() {
+                isGridView = !isGridView;
+              });
             },
-          );
-        },
+          ),
+        ],
+      ),
+      body: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 300),
+        child: isGridView
+            ? GridView.builder(
+          key: const ValueKey('grid'),
+          padding: const EdgeInsets.all(8),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 8,
+            crossAxisSpacing: 8,
+            childAspectRatio: 0.85,
+          ),
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            final item = items[index];
+            return InkWell(
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  '/item',
+                  arguments: item,
+                );
+              },
+              child: Card(
+                elevation: 4,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Hero(
+                      tag: item.title,
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                        child: Image.asset(
+                          item.imagePath,
+                          height: 100,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            item.title,
+                            style: const TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.bold),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          Text(
+                            item.location,
+                            style: const TextStyle(
+                                color: Colors.grey, fontSize: 12),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          const SizedBox(height: 4),
+                          Row(
+                            children: [
+                              const Icon(Icons.star,
+                                  color: Colors.red, size: 16),
+                              const SizedBox(width: 4),
+                              Text('${item.stars}',
+                                  style: const TextStyle(fontSize: 12)),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+        )
+            : ListView.builder(
+          key: const ValueKey('list'),
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            final item = items[index];
+            return ItemCard(
+              item: item,
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  '/item',
+                  arguments: item,
+                );
+              },
+            );
+          },
+        ),
       ),
       bottomNavigationBar: Container(
         color: Colors.blue.shade50,
@@ -72,4 +173,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
