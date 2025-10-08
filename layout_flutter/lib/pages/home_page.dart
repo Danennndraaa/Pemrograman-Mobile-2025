@@ -57,6 +57,19 @@ class HomePage extends StatelessWidget {
           );
         },
       ),
+      bottomNavigationBar: Container(
+        color: Colors.blue.shade50,
+        padding: const EdgeInsets.all(12),
+        child: const Text(
+          '© Danendra Adhipramana | 244107023011',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            color: Colors.grey,
+          ),
+        ),
+      ),
     );
   }
 }
+
