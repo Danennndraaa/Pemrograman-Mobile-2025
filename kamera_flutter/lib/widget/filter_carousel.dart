@@ -4,7 +4,7 @@ import 'filter_selector.dart';
 
 @immutable
 class PhotoFilterCarousel extends StatefulWidget {
-  final File imageFile; // Tambahkan properti ini
+  final File imageFile; // Properti untuk foto hasil kamera
 
   const PhotoFilterCarousel({super.key, required this.imageFile});
 
@@ -48,16 +48,18 @@ class _PhotoFilterCarouselState extends State<PhotoFilterCarousel> {
   }
 
   Widget _buildPhotoWithFilter() {
-    return ValueListenableBuilder(
+    return ValueListenableBuilder<Color>(
       valueListenable: _filterColor,
       builder: (context, color, child) {
-        // Anda bisa ganti dengan foto Anda sendiri
-        return Image.network(
-          'https://docs.flutter.dev/cookbook/img-files'
-              '/effects/instagram-buttons/millennial-dude.jpg',
-          color: color.withOpacity(0.5),
-          colorBlendMode: BlendMode.color,
-          fit: BoxFit.cover,
+        return ColorFiltered(
+          colorFilter: ColorFilter.mode(
+            color.withOpacity(0.5),
+            BlendMode.color,
+          ),
+          child: Image.file(
+            widget.imageFile, // <-- gunakan foto hasil kamera
+            fit: BoxFit.cover,
+          ),
         );
       },
     );

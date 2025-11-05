@@ -60,12 +60,17 @@ class _CameraPageState extends State<CameraPage> {
           }
         },
       )
-          : PhotoFilterCarousel(imageFile: File(_capturedImage!.path)),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _takePicture,
-        backgroundColor: Colors.purple, // warna tombol
-        child: const Icon(Icons.camera, color: Colors.white), // pastikan warnanya kontras
+          : PhotoFilterCarousel(
+        imageFile: File(_capturedImage!.path),
       ),
+      floatingActionButton: _capturedImage == null
+          ? FloatingActionButton(
+        onPressed: _takePicture,
+        backgroundColor: Colors.purple,
+        child: const Icon(Icons.camera, color: Colors.white),
+      )
+          : null, // FAB hilang saat di page filter
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
