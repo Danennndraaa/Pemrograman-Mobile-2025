@@ -53,7 +53,7 @@ saat di swipe akan menampilkan beberapa filter warna
 ![Documentations Kamera_Flutter](Docs/07.png)
 
 > [!WARNING]
-> Disini ikon filter (lingkaran bertekstur) muncul sebagai tanda “X merah” alias missing image. Karena gambar tidak berhasil dimuat dari URL yang digunakan di filter_item.dart. atau sudah tidak didukung lagi alias 404.
+> Untuk memperbaiki ikon filter (lingkaran bertekstur) muncul sebagai tanda “X merah” alias missing image. diperlukan url aktif yang diubah atau di replace di bagian `filter_item.dart`
 
 ![Documentations Kamera_Flutter](Docs/08.png)
 
