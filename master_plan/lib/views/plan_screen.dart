@@ -1,4 +1,5 @@
 import '../models/data_layer.dart';
+import '../provider/plan_provider.dart'; // Import Provider
 import 'package:flutter/material.dart';
 
 class PlanScreen extends StatefulWidget {
@@ -9,98 +10,104 @@ class PlanScreen extends StatefulWidget {
 }
 
 class _PlanScreenState extends State<PlanScreen> {
-  // Langkah 6: Variabel plan
-  Plan plan = const Plan();
+  // HAPUS variabel 'plan' lokal. State sekarang ada di Provider.
 
-  // Langkah 10: Scroll Controller
   late ScrollController scrollController;
 
-  // Langkah 11: initState
   @override
   void initState() {
     super.initState();
     scrollController = ScrollController()
       ..addListener(() {
-        // Logika untuk menghilangkan fokus keyboard saat scroll
         FocusScope.of(context).requestFocus(FocusNode());
       });
   }
 
-  // Langkah 13: dispose
   @override
   void dispose() {
     scrollController.dispose();
     super.dispose();
   }
 
+  // Langkah 9: Ubah method build menggunakan ValueListenableBuilder
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Ganti dengan nama panggilan Anda
-      appBar: AppBar(title: const Text('Master Plan: Danendra Adhipramana')),
-      body: _buildList(),
-      floatingActionButton: _buildAddTaskButton(),
+      appBar: AppBar(title: const Text('Master Plan')),
+      body: ValueListenableBuilder<Plan>(
+        valueListenable: PlanProvider.of(context),
+        builder: (context, plan, child) {
+          return Column(
+            children: [
+              Expanded(child: _buildList(plan)),
+              SafeArea(
+                child: Text(
+                  plan.completenessMessage,
+                  style: Theme.of(context).textTheme.bodyLarge, // Opsional: styling
+                ),
+              )
+            ],
+          );
+        },
+      ),
+      floatingActionButton: _buildAddTaskButton(context),
     );
   }
 
-  // Langkah 7: Tombol Tambah
-  Widget _buildAddTaskButton() {
+  // Langkah 5: Edit _buildAddTaskButton
+  Widget _buildAddTaskButton(BuildContext context) {
+    ValueNotifier<Plan> planNotifier = PlanProvider.of(context);
     return FloatingActionButton(
       child: const Icon(Icons.add),
       onPressed: () {
-        setState(() {
-          plan = Plan(
-            name: plan.name,
-            tasks: List<Task>.from(plan.tasks)..add(const Task()),
-          );
-        });
+        Plan currentPlan = planNotifier.value;
+        planNotifier.value = Plan(
+          name: currentPlan.name,
+          tasks: List<Task>.from(currentPlan.tasks)..add(const Task()),
+        );
       },
     );
   }
 
-  // Langkah 8 & 12: List Builder dengan Scroll behavior
-  Widget _buildList() {
+  // Langkah 7: Edit _buildList
+  Widget _buildList(Plan plan) {
     return ListView.builder(
       controller: scrollController,
-      // Langkah 12: Keyboard dismiss behavior
-      keyboardDismissBehavior: Theme.of(context).platform == TargetPlatform.iOS
-          ? ScrollViewKeyboardDismissBehavior.onDrag
-          : ScrollViewKeyboardDismissBehavior.manual,
       itemCount: plan.tasks.length,
-      itemBuilder: (context, index) => _buildTaskTile(plan.tasks[index], index),
+      itemBuilder: (context, index) =>
+          _buildTaskTile(plan.tasks[index], index, context),
     );
   }
 
-  // Langkah 9: Task Tile (Checkbox & Text Field)
-  Widget _buildTaskTile(Task task, int index) {
+  // Langkah 6: Edit _buildTaskTile
+  Widget _buildTaskTile(Task task, int index, BuildContext context) {
+    ValueNotifier<Plan> planNotifier = PlanProvider.of(context);
     return ListTile(
       leading: Checkbox(
           value: task.complete,
           onChanged: (selected) {
-            setState(() {
-              plan = Plan(
-                name: plan.name,
-                tasks: List<Task>.from(plan.tasks)
-                  ..[index] = Task(
-                    description: task.description,
-                    complete: selected ?? false,
-                  ),
-              );
-            });
+            Plan currentPlan = planNotifier.value;
+            planNotifier.value = Plan(
+              name: currentPlan.name,
+              tasks: List<Task>.from(currentPlan.tasks)
+                ..[index] = Task(
+                  description: task.description,
+                  complete: selected ?? false,
+                ),
+            );
           }),
       title: TextFormField(
         initialValue: task.description,
         onChanged: (text) {
-          setState(() {
-            plan = Plan(
-              name: plan.name,
-              tasks: List<Task>.from(plan.tasks)
-                ..[index] = Task(
-                  description: text,
-                  complete: task.complete,
-                ),
-            );
-          });
+          Plan currentPlan = planNotifier.value;
+          planNotifier.value = Plan(
+            name: currentPlan.name,
+            tasks: List<Task>.from(currentPlan.tasks)
+              ..[index] = Task(
+                description: text,
+                complete: task.complete,
+              ),
+          );
         },
       ),
     );
